@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
+import savebutton from "../assets/icons8-save-as.gif";
+import deletebutton from "../assets/deletebutton.png";
+import editbutton from "../assets/editbutton.png";
+import copybutton from "../assets/copybutton.png";
+import showPass from "../assets/showPass.png";
+import hidePass from "../assets/hidePass.png";
+
 
 const Manager = () => {
-  const deletebutton = "/src/assets/deletebutton.png";
-  const editbutton = "/src/assets/editbutton.png";
-  const copybutton = "/src/assets/copybutton.png";
-  const savebutton = "../assets/icons8-save-as.gif";
 
   const [form, setForm] = useState({ url: "", email: "", pass: "", note: "" });
   const [toggleType, setToggleType] = useState("password");
   const [passwordArray, setPasswordArray] = useState([]);
 
-  let passToggleIcon = "/src/assets/showPass.png";
+  let passToggleIcon = showPass;
   let passToggleIconAlt = "show";
 
   useEffect(() => {
@@ -27,13 +30,13 @@ const Manager = () => {
 
   function showPassword(e) {
     if (toggleType === "password") {
-      e.target.src = "/src/assets/hidePass.png";
-      passToggleIcon = "/src/assets/hidePass.png";
+      e.target.src = hidePass;
+      passToggleIcon = hidePass;
       passToggleIconAlt = "hide";
       setToggleType("text");
     } else {
-      e.target.src = "/src/assets/showPass.png";
-      passToggleIcon = "/src/assets/showPass.png";
+      e.target.src = showPass;
+      passToggleIcon = showPass;
       passToggleIconAlt = "show";
       setToggleType("password");
     }
