@@ -4,7 +4,7 @@ const Manager = () => {
   const deletebutton = "/src/assets/deletebutton.png";
   const editbutton = "/src/assets/editbutton.png";
   const copybutton = "/src/assets/copybutton.png";
-  const savebutton = "/src/assets/icons8-save-as.gif";
+  const savebutton = "../assets/icons8-save-as.gif";
 
   const [form, setForm] = useState({ url: "", email: "", pass: "", note: "" });
   const [toggleType, setToggleType] = useState("password");
