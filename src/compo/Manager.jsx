@@ -159,7 +159,7 @@ const Manager = () => {
           className="m-4 px-2 py-2 text-lg font-mono flex border border-zinc-800 rounded-tl-2xl rounded-br-2xl rounded-bl-md rounded-tr-md bg-amber-200 hover:font-bold shadow-lg active:shadow-none active:translate-y-1"
           title="save"
         >
-          Store Password
+          Store Credentials
           <img src={savebutton} alt="saveicon" className="h-8 px-1 ml-2" />
         </button>
       </div>
