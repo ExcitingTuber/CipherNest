@@ -144,7 +144,7 @@ const Manager = () => {
           name="note"
           onChange={handleChange}
           value={form.note}
-          placeholder="Note"
+          placeholder="Add Note"
           cols="25"
           rows="10"
           autoComplete="off"
