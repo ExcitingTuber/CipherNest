@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-  const githublogo = "src/assets/githublogo.png";
+  const githublogo = "/src/assets/githublogo.png";
 
   function goTop() {
     document.body.scrollTop = 0;
