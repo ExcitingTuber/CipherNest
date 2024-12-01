@@ -5,6 +5,7 @@ import editbutton from "../assets/editbutton.png";
 import copybutton from "../assets/copybutton.png";
 import showPass from "../assets/showPass.png";
 import hidePass from "../assets/hidePass.png";
+import randPass from "../assets/randPass.png";
 
 
 const Manager = () => {
@@ -62,6 +63,7 @@ const Manager = () => {
 
   const copyText = (text) => {
     navigator.clipboard.writeText(text);
+    alert("Copied to CLIPBOARD");
   };
 
   const deletePassword = (index) => {
@@ -87,6 +89,16 @@ const Manager = () => {
       goTop();
     }
   };
+
+  const generateRandomPass = () => {
+    const s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&*";
+    let rpass = "";
+    for(let i=0; i<8; i++){
+      rpass = rpass + s.charAt(Math.floor(Math.random()*68));
+    }
+    setForm({ url: form.url, email: form.email, pass: rpass, note: form.note });
+  };
+  
 
   return (
     <>
@@ -142,6 +154,14 @@ const Manager = () => {
             />
           </span>
         </div>
+        <button
+          onClick={generateRandomPass}
+          className="m-4 px-2 py-2 text-lg font-mono flex border border-zinc-800 rounded-tl-2xl rounded-br-2xl rounded-bl-md rounded-tr-md bg-amber-200 hover:font-bold shadow-lg active:shadow-none active:translate-y-1"
+          title="save"
+        >
+          Generate Random Password
+          <img src={randPass} alt="saveicon" className="h-8 px-1 ml-2" />
+        </button>
 
         <textarea
           name="note"
